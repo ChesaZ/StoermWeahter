@@ -1,0 +1,56 @@
+//
+//  CurrentWeatherViewModel.swift
+//  StoermWeather
+//
+//  Created by Jonas Gamburg on 22/07/2017.
+//  Copyright © 2017 Jonas Gamburg. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+struct CurrentWeatherViewModel {
+    let temperature: Double
+    let feelsLikeTemp: Double
+    let wind: String
+    let humidity: String
+    let precepitationProbability: String
+    let summary: String
+    //let icon: UIImage
+    
+    init(model: CurrentWeather) {
+        
+        /*
+        func formatTime(_ jsonValue: Float) -> String {
+            let date = Date(timeIntervalSince1970: TimeInterval(jsonValue))
+            let formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm"
+            
+            return formatter.string(from: date)
+        }
+        */
+        
+        // ----------- //
+       
+        let roundedTemperature = Double(model.temperature)
+        let tempCelcius = Int((roundedTemperature - 32.0) * (5/9))
+        self.temperature = Double(tempCelcius)
+        
+        let roundedTemp = Double(model.feelsLike)
+        let tempCel = Int((roundedTemp - 32.0) * (5/9))
+        self.feelsLikeTemp = Double(tempCel)
+        
+        self.wind = "Wind: \(model.windSpeed) km/h"
+        
+        let humidityPercentValue = Int(model.humidity * 100);
+        self.humidity = "Humidity: \(humidityPercentValue)%"
+        
+        let precipPercentValue = Int(model.precipitationProbability * 100)
+        self.precepitationProbability = "Rain: \(precipPercentValue)%"
+        
+        self.summary = model.summary
+        
+        //let weatherIcon = WeatherIcon(iconString: model.icon)
+        //self.icon = weatherIcon.image
+    }
+}
