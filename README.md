@@ -4,6 +4,21 @@ This is my first serious app made. The app is a simple weather app allowing the 
 
 Below are included several images of the app:
 
+Main Weather Panel:
+------------------
 ![alt text](https://github.com/ChesaZ/StoermWeahter/blob/master/MainWeatherPanel.PNG)
 
 
+
+Forecast Panel:
+---------------
+![alt text](https://github.com/ChesaZ/StoermWeahter/blob/master/WeatherForecastPanel.PNG)
+
+With menu:
+![alt text](https://github.com/ChesaZ/StoermWeahter/blob/master/WeatherForecastPanelWithMenu.PNG)
+
+
+
+Add Location Panel:
+-------------------
+![alt text](https://github.com/ChesaZ/StoermWeahter/blob/master/AddLocationPanel.PNG)
