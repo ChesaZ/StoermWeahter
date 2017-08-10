@@ -14,7 +14,10 @@ Forecast Panel:
 ---------------
 ![alt text](https://github.com/ChesaZ/StoermWeahter/blob/master/WeatherForecastPanel.PNG)
 
-With menu:
+
+
+Forecast Panel With Menu:
+-------------------------
 ![alt text](https://github.com/ChesaZ/StoermWeahter/blob/master/WeatherForecastPanelWithMenu.PNG)
 
 
