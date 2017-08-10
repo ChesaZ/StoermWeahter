@@ -17,7 +17,6 @@ public var celcius = true
 
 class HomePanelVC: UIViewController, UIViewControllerTransitioningDelegate, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
-    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var locationsTableView: UITableView!
     @IBOutlet weak var settingsButton: UIButtonX!
