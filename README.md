@@ -11,22 +11,22 @@ Below are included several images of the app:
 
 Main Weather Panel:
 ------------------
-![alt text](https://github.com/ChesaZ/StoermWeahter/blob/master/MainWeatherPanel.PNG)
+![alt text](https://github.com/ChesaZ/StoermWeahter/blob/master/App%20Images/MainWeatherPanel.PNG)
 
 
 
 Forecast Panel:
 ---------------
-![alt text](https://github.com/ChesaZ/StoermWeahter/blob/master/WeatherForecastPanel.PNG)
+![alt text](https://github.com/ChesaZ/StoermWeahter/blob/master/App%20Images/WeatherForecastPanel.PNG)
 
 
 
 Forecast Panel With Menu:
 -------------------------
-![alt text](https://github.com/ChesaZ/StoermWeahter/blob/master/WeatherForecastPanelWithMenu.PNG)
+![alt text](https://github.com/ChesaZ/StoermWeahter/blob/master/App%20Images/WeatherForecastPanelWithMenu.PNG)
 
 
 
 Add Location Panel:
 -------------------
-![alt text](https://github.com/ChesaZ/StoermWeahter/blob/master/AddLocationPanel.PNG)
+![alt text](https://github.com/ChesaZ/StoermWeahter/blob/master/App%20Images/AddLocationPanel.PNG)
