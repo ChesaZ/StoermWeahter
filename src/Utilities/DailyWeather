@@ -1,0 +1,92 @@
+//
+//  DailyWeather.swift
+//  StoermWeather
+//
+//  Created by Jonas Gamburg on 04/08/2017.
+//  Copyright © 2017 Jonas Gamburg. All rights reserved.
+//
+
+import Foundation
+
+
+struct DailyWeather {
+    
+    struct Day {
+        let day: String
+        let temperatureMax: Double
+        let temperatureMin: Double
+        let feelsLikeMax: Double
+        let feelsLikeMin: Double
+        let windSpeed: Double
+        let sunrise: String
+        let sunset: String
+        let humidity: Double
+        let precipProbability: Double
+        let summary: String
+    }
+    
+    var days : [Day]
+}
+
+extension DailyWeather {
+    
+    
+    struct Key {
+        static let time = "time"
+        static let tempMax = "temperatureMax"
+        static let tempMin = "temperatureMin"
+        static let apparentTempMin = "apparentTemperatureMin"
+        static let apparentTempMax = "apparentTemperatureMax"
+        static let wind = "windSpeed"
+        static let sunrise = "sunriseTime"
+        static let sunset = "sunsetTime"
+        static let humidity = "humidity"
+        static let precipProb = "precipProbability"
+        static let summary = "summary"
+        static let icon = "icon"
+        static let data = "data"
+    }
+    
+    
+    init?(json: [String: AnyObject]) {
+        
+        guard let sumaryValue = json[Key.summary] as? String,
+                let iconValue = json[Key.icon] as? String,
+                let data = json[Key.data] as? [AnyObject]
+            else { return nil }
+        
+        
+        
+        
+        func formatTime(_ jsonValue: Double, _ format: String) -> String {
+            let date = Date(timeIntervalSince1970: TimeInterval(jsonValue))
+            let formatter = DateFormatter()
+            formatter.dateFormat = format
+            
+            return formatter.string(from: date)
+        }
+        
+        
+        
+        self.days = [Day]()
+        var count = 1
+        while count < 7 {
+            self.days.append(
+                Day(
+                    day: formatTime((data[count][Key.time] as? Double)!, "EEEE"),
+                    temperatureMax: (data[count][Key.tempMax] as? Double)!,
+                    temperatureMin: (data[count][Key.tempMin] as? Double)!,
+                    feelsLikeMax: (data[count][Key.apparentTempMax] as? Double)!,
+                    feelsLikeMin: (data[count][Key.apparentTempMin] as? Double)!,
+                    windSpeed: (data[count][Key.wind] as? Double)!,
+                    sunrise: formatTime((data[count][Key.sunrise] as? Double)!, "HH:mm"),
+                    sunset: formatTime((data[count][Key.sunset] as? Double)!, "HH:mm"),
+                    humidity: (data[count][Key.humidity] as? Double)!,
+                    precipProbability: (data[count][Key.precipProb] as? Double)!,
+                    summary: (data[count][Key.summary] as? String)!
+                )
+            )
+            count += 1
+        }
+    }
+}
