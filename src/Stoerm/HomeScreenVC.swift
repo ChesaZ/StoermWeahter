@@ -185,7 +185,6 @@ class HomeScreenVC: UIViewController, CLLocationManagerDelegate, UICollectionVie
         cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
     }
     
-    
     func addShadowWithOffset(to button: UIButton, _ width: Double, _ height: Double, _ radius: CGFloat, _ opacity: Float) {
         button.layer.shadowColor = UIColor.black.cgColor
         button.layer.shadowOffset = CGSize(width: width, height: height)
