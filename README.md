@@ -4,7 +4,6 @@ This is my first serious app made. The app is a simple weather app allowing the 
 
 Below are included several images of the app:
 
-![alt text](https://raw.githubusercontent.com/ChesaZ/StoermWeahter/edit/master/MainWeatherPanel.png)
 ![alt text](https://github.com/ChesaZ/StoermWeahter/blob/master/MainWeatherPanel.PNG)
 
 
