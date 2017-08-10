@@ -122,7 +122,6 @@ class AddLocVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         customAlertView.layer.shadowOffset = CGSize(width: 0.0, height: 2.5)
     }
     
-    
     // Location Stuff //
     //----------------//
     
@@ -143,7 +142,6 @@ class AddLocVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                 locationName: "Defaut Location")
         }
     }
-    
     
     func addShadowWithOffset(to button: UIButton, _ width: Int, _ height: Int, _ radius: CGFloat, _ opacity: Float) {
         button.layer.shadowColor = UIColor.black.cgColor
