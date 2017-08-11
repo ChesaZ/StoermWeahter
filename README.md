@@ -5,6 +5,8 @@ The app is a simple weather app allowing the user to view weather data fro his o
 P.S: In the background of both the Main Panel and the Forecast Panel is a gif that is runnin using a github extension:
 https://github.com/bahlo/SwiftGif
 
+For those who want to download the working full project: https://www.dropbox.com/s/epn6lvfnjdzsah0/StoermWeather.zip?dl=0
+
 WARNING: I did not add any saving option (no usage of Core Data included), so once the app is closed and reopened the location that the user has added will not be saved, not would the changes that the user had done in the settings. I did not add any use od saving data because I did not intend this app to be used daily. Only to showcase a bit of my skill.
 
 Below are included several images of the app:
